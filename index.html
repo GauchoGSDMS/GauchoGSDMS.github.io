@@ -1,11 +1,85 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Hola</title>
+	<title>The Final Countdown</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </head>
 <body>
-<script type="text/javascript">
-	window.location.replace("https://gauchogsdms.github.io/html-docs/");
+<!-- Display the countdown timer in an element -->
+<br><br><br><h2 class="text-center">The Final Countdown</h2><br><br>
+<h5 class="text-center">Nos Recibimos en</h5>
+<h5 class="text-center">
+<button type="button text-center" class="btn btn-warning center"><h3 id="demo"></h3></button></h5>
+<br><br>
+<h5 class="text-center">
+<img src="https://media.licdn.com/dms/image/C5603AQF90MZhlA_QbQ/profile-displayphoto-shrink_800_800/0?e=1548892800&v=beta&t=TG_JG8XwMxBuW_TK_CWdDO7Cr-Fgtq5X7kOAvBZmkmM" height="100">
+<img src="https://media.licdn.com/dms/image/C4D03AQHgcR4IQSMTew/profile-displayphoto-shrink_800_800/0?e=1548892800&v=beta&t=nvrwTGuSzwmum-Srbu-V2knN9z9u9Uyr_THOe1qylak" height="100">
+<img src="https://media.licdn.com/dms/image/C4E03AQHT61CTPYOyVg/profile-displayphoto-shrink_800_800/0?e=1548892800&v=beta&t=41hMKdGB8j7UrDjDm9pDIBzj4L1cApd4dziMpIgOSys" height="100">
+<img src="https://media.licdn.com/dms/image/C4E03AQEKevyeEcs1dg/profile-displayphoto-shrink_200_200/0?e=1548892800&v=beta&t=cHWsVaOdftCOycVH4HNsjt8EDTJdLsCbOzlZT63oh4Y" height="100">
+</h5>
+
+<style>
+
+body{
+	color: #ffffff;
+    text-align: left;
+    background-color: #252525;
+}
+
+img {
+    border-radius: 50%;
+}
+    
+</style>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Dec 21, 2018 20:30:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get todays date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("demo").innerHTML = days + " Dias - " + hours + "h "
+  + minutes + "m " + seconds + "s  ";
+
+  // If the count down is finished, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+
+
 </script>
+<!-- <script>
+  (function() {
+    var cx = '006293098911933100488:nexfxbohnaw';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script> -->
+<gcse:search></gcse:search>
 </body>
 </html>
